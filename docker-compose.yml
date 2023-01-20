@@ -42,6 +42,7 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
       # 
       - ./postgres:/docker-entrypoint-initdb.d
+      - ./backups:/backups
     environment:
       - POSTGRES_PASSWORD=${XNAT_DATASOURCE_ADMIN_PASSWORD}
       - POSTGRES_DB=${XNAT_DATASOURCE_NAME}
